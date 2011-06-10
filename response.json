@@ -1,0 +1,13 @@
+var update = {
+  "7732094313":{
+    "id":"1",
+    "status":"registered",
+    "key":"Your secret code is "+ Math.floor(Math.random()*10001)
+  }
+};
+
+
+exports.update = update;
+
+
+
