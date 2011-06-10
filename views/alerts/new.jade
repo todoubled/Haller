@@ -1,0 +1,11 @@
+!=partial('../partials/header')
+
+div.container_24.clearfix
+	div.grid_24
+		h1= title
+		p Schedule an alert to send to your subscribers.
+
+		h2 Create a new Alert.
+
+		form(method='post', action='/alerts/')
+			!=partial('fields', { locals: { a: a } })
