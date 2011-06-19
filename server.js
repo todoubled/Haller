@@ -1,4 +1,6 @@
-// Init App
+/*
+ * @desc Load required modules
+*/
 var express = require('express');
 var app = module.exports = express.createServer();
 var sys = require('sys');
@@ -41,11 +43,14 @@ app.get('/', function(req, res) {
   });
 });
 
+var haller = require('./haller');
+
 // Twilio SMS
 app.post('/status', function(req, res) {
   var message = req.body.Body;
   var from = req.body.From;
   //sys.log('Message: ' + message + ', From: ' + from);
+  haller.Haller(req);
   var words = status.get(from, message);
   var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n<Response>\n<Sms>'+words+'</Sms>\n</Response>';
   res.send(twiml, {'Content-Type':'text/xml'}, 200);
