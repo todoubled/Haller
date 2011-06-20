@@ -52,7 +52,7 @@ app.post('/status', function(req, res) {
   //sys.log('Message: ' + message + ', From: ' + from);
   haller.Haller(req);
   var words = status.get(from, message);
-  var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n<Response>\n<Sms>'+words+'</Sms>\n</Response>';
+  var twiml = '<?xml version="1.0" encoding="UTF-8" ?>\n<Response>\n<Sms>'+words+'</Sms>\n</Response>\n';
   res.send(twiml, {'Content-Type':'text/xml'}, 200);
 });
 
