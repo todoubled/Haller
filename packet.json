@@ -1,0 +1,10 @@
+{
+  "type":"sms",
+  "content":"You're a winner!",
+  "title":"Winner",
+  "schedule":new Date(),
+  "sender":"7732094313",
+  "sender_id":"1",
+  "receiver":"5555555555",
+  "note_id":"2"
+}
