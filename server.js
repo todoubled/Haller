@@ -34,7 +34,7 @@ app.configure('production', function() {
 	app.use(express.errorHandler()); 
 });
 
-var status = require('./status');
+var status = require('./lib/status');
 
 // Home Page
 app.get('/', function(req, res) {
@@ -43,7 +43,7 @@ app.get('/', function(req, res) {
   });
 });
 
-var haller = require('./haller');
+var haller = require('./lib/haller');
 
 // Twilio SMS
 app.post('/status', function(req, res) {
