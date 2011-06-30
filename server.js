@@ -35,6 +35,7 @@ app.configure('production', function() {
 });
 
 var status = require('./lib/status');
+var haller = require('./lib/haller');
 
 // Home Page
 app.get('/', function(req, res) {
@@ -42,8 +43,6 @@ app.get('/', function(req, res) {
     title: 'Haller'
   });
 });
-
-var haller = require('./lib/haller');
 
 // Twilio SMS
 app.post('/status', function(req, res) {
