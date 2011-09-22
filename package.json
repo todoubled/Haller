@@ -1,0 +1,10 @@
+{
+  "name":"Haller",
+  "description":"Email and SMS notification app",
+  "version":"0.0.1",
+  "author":"Todd Larsen <toddlar@gmail.com>",
+  "dependencies": {
+    "express":"",
+    "jade":""
+  }
+}
